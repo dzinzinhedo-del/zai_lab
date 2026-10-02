@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — ZAI LAB</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<header>
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <span><span class="dot-live"></span> Disponibles pour de nouveaux projets</span>
+        <span>Porto-Novo, Bénin</span>
+      </div>
+      <div class="topbar-right">
+        <a href="mailto:zai.lab95@gmail.com" class="topbar-mail">zai.lab95@gmail.com</a>
+        <div class="social-row social-row--top">
+          <a href="https://wa.me/message/7WDVWGU74DTKE1" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://web.facebook.com/zailab95" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/in/luc-zinzinh%C3%A9do-7a95b5175/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="brand">
+        <img src="assets/logo-zailab.jpg" alt="ZAI LAB — Analytics &amp; Infographics" class="brand-logo">
+      </a>
+      <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false"><span></span></button>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="equipe.html">Équipe</a></li>
+        <li class="has-dropdown">
+          <a href="#">Ressources <span class="caret"><i class="fa-solid fa-chevron-down"></i></span></a>
+          <div class="dropdown-menu">
+            <a href="opportunites.html">Opportunités</a>
+            <a href="actualites.html">Actualités</a>
+            <a href="temoignages.html">Témoignages</a>
+          </div>
+        </li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-primary"><span class="btn-label">Prendre rendez-vous</span><span class="btn-arrow"><i class="fa-solid fa-angles-right"></i></span></a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- CONTACT — bandeau sombre + carte de formulaire -->
+<section class="contact-hero">
+  <span class="deco deco-1"></span>
+  <span class="deco deco-2"></span>
+  <span class="deco deco-3"></span>
+  <span class="deco deco-4"></span>
+  <span class="deco deco-5"></span>
+  <span class="deco deco-6"></span>
+  <span class="deco deco-7"></span>
+
+  <div class="container contact-hero-grid">
+    <div class="contact-hero-copy">
+      <div class="label-pill label-pill--dark"><i class="fa-solid fa-comments"></i> Contact</div>
+      <h1>Parlons de votre projet et donnons vie à votre idée.</h1>
+      <p class="lede">Que vous ayez une idée, un projet en cours, ou juste une question,prenez rendez-vous, nous en discutons ensemble.</p>
+
+      <ul class="check-list">
+        <li><span class="check-dot"><i class="fa-solid fa-check"></i></span> Comprendre vos objectifs et le contexte de votre projet</li>
+        <li><span class="check-dot"><i class="fa-solid fa-check"></i></span> Discuter de votre public, vos données et vos contraintes</li>
+        <li><span class="check-dot"><i class="fa-solid fa-check"></i></span> Aborder le périmètre, les délais et le budget</li>
+      </ul>
+    </div>
+
+    <div class="contact-form-card">
+      <h2 class="form-title">Décrivez-nous votre besoin</h2>
+      <p class="form-sub">Nous vous répondrons dans les meilleurs délais.</p>
+      <form class="contact-form" onsubmit="return false;">
+        <div class="field-row">
+          <div class="field">
+            <label for="nom">Nom complet</label>
+            <input id="nom" type="text" placeholder="Votre nom complet" autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="organisation">Organisation</label>
+            <input id="organisation" type="text" placeholder="Votre organisation" autocomplete="organization">
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="vous@exemple.com" autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="telephone">Téléphone</label>
+            <input id="telephone" type="tel" placeholder="+229 01 29 62 81 96" autocomplete="tel">
+          </div>
+        </div>
+        <div class="field">
+          <label for="type-projet">Type de projet</label>
+          <select id="type-projet">
+            <option value="" selected>Sélectionner une option</option>
+            <option>Analyse de données</option>
+            <option>Étude / Recherche</option>
+            <option>Modélisation</option>
+            <option>Suivi &amp; Évaluation</option>
+            <option>Rapport / Publication</option>
+            <option>Infographie / Communication</option>
+            <option>Autre</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" placeholder="Parlez-nous de votre projet, de vos objectifs ou de vos questions..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit-pill">Envoyer ma demande <i class="fa-regular fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- COORDONNÉES — simple rangée, sans carte -->
+<section>
+  <div class="container">
+    <div class="contact-strip">
+      <div>
+        <div class="contact-strip-icon"><i class="fa-solid fa-phone"></i></div>
+        <div><strong>Téléphone</strong><span>+229 01 29 62 81 96</span></div>
+      </div>
+      <div>
+        <div class="contact-strip-icon"><i class="fa-solid fa-envelope"></i></div>
+        <div><strong>Email</strong><span>zai.lab95@gmail.com</span></div>
+      </div>
+      <div>
+        <div class="contact-strip-icon"><i class="fa-brands fa-whatsapp"></i></div>
+        <div><strong>WhatsApp</strong><span>+229 01 29 62 81 96</span></div>
+      </div>
+      <div>
+        <div class="contact-strip-icon"><i class="fa-solid fa-location-dot"></i></div>
+        <div><strong>Localisation</strong><span>Porto-Novo, Bénin</span></div>
+      </div>
+    </div>
+    <div class="legal-ids">
+      <span>IFU · 0202112764958</span>
+      <span>RCCM · RB/PNO/26 A 127063</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><img src="assets/logo-zailab.png" alt="ZAI LAB — Analytics &amp; Infographics" class="footer-logo"></div>
+        <p>Votre partenaire de confiance pour les projets.</p>
+        <div class="social-row">
+          <a href="https://web.facebook.com/zailab95" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/in/luc-zinzinh%C3%A9do-7a95b5175/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://wa.me/message/7WDVWGU74DTKE1" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="equipe.html">Équipe</a></li>
+          <li><a href="temoignages.html">Témoignages</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Ressources</h4>
+        <ul>
+          <li><a href="opportunites.html">Opportunités</a></li>
+          <li><a href="actualites.html">Actualités</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Porto-Novo, République du Bénin</p>
+        <p>zai.lab95@gmail.com</p>
+        <p>+229 01 29 62 81 96</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 ZAI LAB — Z Analytics &amp; Infographics. Tous droits réservés.</span>
+      <div class="social-row">
+        <a href="https://web.facebook.com/zailab95" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.linkedin.com/in/luc-zinzinh%C3%A9do-7a95b5175/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://wa.me/message/7WDVWGU74DTKE1" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
