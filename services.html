@@ -4,9 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Services — ZAI LAB</title>
+<meta name="description" content="ZAI LAB réunit analyse de données, suivi-évaluation et communication visuelle sous un même toit, à Porto-Novo, Bénin.">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link rel="icon" type="image/png" href="assets/logo-zailab.png">
+<link rel="stylesheet" href="Responsive.css">
 </head>
 <body>
 
@@ -15,7 +17,7 @@
     <div class="container">
       <div class="topbar-left">
         <span><span class="dot-live"></span> Disponibles pour de nouveaux projets</span>
-        <span>Porto-Novo, Bénin</span>
+        <span class="topbar-loc">Porto-Novo, Bénin</span>
       </div>
       <div class="topbar-right">
         <a href="mailto:zai.lab95@gmail.com" class="topbar-mail">zai.lab95@gmail.com</a>
@@ -37,18 +39,10 @@
         <li><a href="index.html">Accueil</a></li>
         <li><a href="a-propos.html">À propos</a></li>
         <li><a href="services.html" class="active">Services</a></li>
-        <li><a href="equipe.html">Équipe</a></li>
-        <li class="has-dropdown">
-          <a href="#">Ressources <span class="caret"><i class="fa-solid fa-chevron-down"></i></span></a>
-          <div class="dropdown-menu">
-            <a href="opportunites.html">Opportunités</a>
-            <a href="actualites.html">Actualités</a>
-            <a href="temoignages.html">Témoignages</a>
-          </div>
-        </li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <div class="nav-cta">
+        <button type="button" class="lang-toggle" aria-label="Changer de langue"><i class="fa-solid fa-globe"></i><span class="lang-current">EN</span></button>
         <a href="contact.html" class="btn btn-primary"><span class="btn-label">Prendre rendez-vous</span><span class="btn-arrow"><i class="fa-solid fa-angles-right"></i></span></a>
       </div>
     </div>
@@ -63,7 +57,6 @@
   </div>
 </section>
 
-<!-- SERVICES — mise en page "process" -->
 <section>
   <div class="container">
     <div class="label-pill"><i class="fa-solid fa-diagram-project"></i> Nos services</div>
@@ -102,37 +95,37 @@
 
       <div class="process-row">
         <div class="process-text">
+          <h3>Rédaction &amp; Montage de projet</h3>
+          <span class="process-underline"></span>
+          <p>Un financement se joue souvent sur la qualité d'un dossier. Nous rédigeons et montons des projets solides, structurés et prêts à convaincre les bailleurs.</p>
+        </div>
+        <div class="process-visual">
+          <span class="process-number">03</span>
+          <div class="process-icon"><i class="fa-solid fa-file-pen"></i></div>
+        </div>
+      </div>
+
+      <div class="process-row">
+        <div class="process-text">
+          <h3>Rapport &amp; Rédaction Scientifique</h3>
+          <span class="process-underline"></span>
+          <p>Nous rédigeons des rapports conformes aux exigences des bailleurs et accompagnons la rédaction et la soumission de vos travaux dans des revues indexées.</p>
+        </div>
+        <div class="process-visual">
+          <span class="process-number">04</span>
+          <div class="process-icon"><i class="fa-solid fa-flask"></i></div>
+        </div>
+      </div>
+
+      <div class="process-row">
+        <div class="process-text">
           <h3>Suivi &amp; Évaluation</h3>
           <span class="process-underline"></span>
           <p>Un projet sans suivi rigoureux est un projet qui avance à l'aveugle. Nous construisons des systèmes qui permettent de piloter, ajuster et prouver l'impact.</p>
         </div>
         <div class="process-visual">
-          <span class="process-number">03</span>
-          <div class="process-icon"><i class="fa-solid fa-bullseye"></i></div>
-        </div>
-      </div>
-
-      <div class="process-row">
-        <div class="process-text">
-          <h3>Rapports &amp; Projets Bancables</h3>
-          <span class="process-underline"></span>
-          <p>Un financement se joue souvent sur la qualité d'un dossier. Nous montons des projets solides et rédigeons des rapports conformes aux exigences des bailleurs.</p>
-        </div>
-        <div class="process-visual">
-          <span class="process-number">04</span>
-          <div class="process-icon"><i class="fa-solid fa-file-invoice"></i></div>
-        </div>
-      </div>
-
-      <div class="process-row">
-        <div class="process-text">
-          <h3>Publication Scientifique</h3>
-          <span class="process-underline"></span>
-          <p>Une recherche non publiée est une recherche à moitié terminée. Nous accompagnons la rédaction et la soumission de vos travaux dans des revues indexées.</p>
-        </div>
-        <div class="process-visual">
           <span class="process-number">05</span>
-          <div class="process-icon"><i class="fa-solid fa-flask"></i></div>
+          <div class="process-icon"><i class="fa-solid fa-bullseye"></i></div>
         </div>
       </div>
 
@@ -152,7 +145,6 @@
   </div>
 </section>
 
-<!-- NOS VALEURS -->
 <section class="bg-white values-section">
   <div class="container">
     <div class="label-pill"><i class="fa-solid fa-compass"></i> Nos valeurs</div>
@@ -189,7 +181,7 @@
 
 <section class="clients-section">
   <div class="container">
-    <div class="eyebrow">Nos clients</div>
+    <div class="label-pill"><i class="fa-solid fa-users"></i> Nos clients</div>
     <h2 class="section-title">Vous êtes peut-être déjà des nôtres.</h2>
     <div class="clients-row">
       <span class="client-pill"><i class="fa-solid fa-globe"></i> ONG et projets internationaux</span>
@@ -222,9 +214,9 @@
         <div class="footer-brand"><img src="assets/logo-zailab.png" alt="ZAI LAB — Analytics &amp; Infographics" class="footer-logo"></div>
         <p>Votre partenaire de confiance pour les projets.</p>
         <div class="social-row">
+          <a href="https://wa.me/message/7WDVWGU74DTKE1" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
           <a href="https://web.facebook.com/zailab95" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
           <a href="https://www.linkedin.com/in/luc-zinzinh%C3%A9do-7a95b5175/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="https://wa.me/message/7WDVWGU74DTKE1" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
       </div>
       <div>
@@ -232,15 +224,6 @@
         <ul>
           <li><a href="a-propos.html">À propos</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="equipe.html">Équipe</a></li>
-          <li><a href="temoignages.html">Témoignages</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Ressources</h4>
-        <ul>
-          <li><a href="opportunites.html">Opportunités</a></li>
-          <li><a href="actualites.html">Actualités</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -254,9 +237,9 @@
     <div class="footer-bottom">
       <span>© 2026 ZAI LAB — Z Analytics &amp; Infographics. Tous droits réservés.</span>
       <div class="social-row">
-        <a href="https://web.facebook.com/zailab95" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="https://www.linkedin.com/in/luc-zinzinh%C3%A9do-7a95b5175/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
         <a href="https://wa.me/message/7WDVWGU74DTKE1" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://web.facebook.com/zailab95" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/in/luc-zinzinh%C3%A9do-7a95b5175/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
       </div>
     </div>
   </div>

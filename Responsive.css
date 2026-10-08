@@ -1,0 +1,339 @@
+/* =========================================================
+   ZAI LAB — responsive.css
+   Ajustements MOBILE & TABLETTE uniquement.
+   À charger APRÈS la feuille de style principale.
+   Aucune règle ici ne s'applique au-dessus de 960px :
+   le rendu ordinateur reste strictement identique.
+   ========================================================= */
+
+/* =========================================================
+   TABLETTE & MOBILE (≤ 960px)
+   ========================================================= */
+@media (max-width:960px){
+
+  /* Encoches / zones sûres (iPhone, Android récents) */
+  .container{
+    padding-left:max(24px, env(safe-area-inset-left));
+    padding-right:max(24px, env(safe-area-inset-right));
+  }
+
+  /* Menu déroulant : défilable et lisible */
+  .navbar .container{ position:relative; }
+  .nav-links{
+    max-height:calc(100vh - 120px);
+    max-height:calc(100dvh - 120px);
+    overflow-y:auto;
+    -webkit-overflow-scrolling:touch;
+    box-shadow:0 18px 30px -18px rgba(5,43,79,.35);
+  }
+  .nav-links a{ font-size:1rem; min-height:48px; display:flex; align-items:center; }
+  .nav-links a.active::after{ display:none; }
+  .nav-links a.active{ color:var(--green); font-weight:600; }
+  .nav-links a:last-child{ border-bottom:none; }
+
+  /* Boutons de la barre : cibles tactiles confortables */
+  .nav-toggle{ width:44px; height:44px; flex-shrink:0; }
+  .lang-toggle{ min-width:44px; justify-content:center; }
+
+  /* Formulaires : 16px minimum pour éviter le zoom automatique iOS */
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form select{ font-size:16px; padding:14px; }
+  .contact-form textarea{ min-height:130px; resize:vertical; }
+
+  /* Titres de section plus souples */
+  .section-head h2,
+  .section-title{ max-width:100%; }
+  .section-sub{ max-width:100%; }
+
+  /* Notes épinglées : un peu plus compactes */
+  .notes-board{ gap:40px 32px; margin-top:44px; }
+  .sticky-note{ width:240px; }
+
+  /* Bandeau d'appel à l'action */
+  .cta-band h2{ max-width:100%; }
+
+  /* Pied de page */
+  .footer-grid{ gap:32px; }
+}
+
+/* =========================================================
+   TABLETTE UNIQUEMENT (701px – 960px)
+   ========================================================= */
+@media (min-width:701px) and (max-width:960px){
+  section{ padding:72px 0; }
+  .hero-v2-inner{ padding:16px 0 56px; }
+  .hero-v2-text h1.hero-rotator{ font-size:clamp(1.15rem,2.2vw,1.35rem); max-width:540px; }
+  .about-photos--single{ max-height:460px; }
+  .process-text p{ max-width:360px; }
+  .contact-hero{ padding:72px 0 80px; }
+  .contact-form-card{ max-width:640px; }
+}
+
+/* =========================================================
+   MOBILE LARGE (≤ 700px)
+   ========================================================= */
+@media (max-width:700px){
+
+  .container{
+    padding-left:max(18px, env(safe-area-inset-left));
+    padding-right:max(18px, env(safe-area-inset-right));
+  }
+
+  /* Barre du haut : compacte, sans débordement */
+  .topbar .container{ padding-top:7px; padding-bottom:7px; gap:10px; }
+  .topbar-left{ justify-content:center; gap:14px; }
+
+  /* Héros : voile plus sombre car le texte occupe toute la largeur */
+  .hero-v2.hero-v2--bg{
+    background-image:
+      linear-gradient(180deg, var(--navy-deep) 0%, rgba(5,43,79,0) 8%, rgba(5,43,79,0) 92%, var(--navy-deep) 100%),
+      linear-gradient(90deg, var(--navy-deep) 0%, rgba(5,43,79,0) 5%, rgba(5,43,79,0) 95%, var(--navy-deep) 100%),
+      linear-gradient(180deg, rgba(5,43,79,.82) 0%, rgba(5,43,79,.72) 55%, rgba(5,43,79,.62) 100%),
+      url('assets/1.png');
+    background-position:center, center, center, 65% 20%;
+  }
+  .hero-v2-inner{ padding:14px 0 36px; }
+  .hero-v2-actions{ padding-top:24px; }
+  .hero-v2-actions .btn{ max-width:100%; }
+
+  /* Cartes services : pleine largeur, bouton toujours visible */
+  .notch-grid{ gap:14px; margin-top:28px; }
+  .notch-card{ min-height:0; padding:24px 20px 84px; }
+  .notch-card p{ max-width:100%; font-size:.88rem; }
+
+  /* À propos */
+  .about-modern{ gap:32px; }
+  .about-cta-row{ gap:18px; margin:22px 0 28px; }
+  .about-photo-single{ border-radius:18px; }
+
+  /* Notes : rotation atténuée pour ne pas déborder */
+  .sticky-note:nth-child(odd){ transform:rotate(-1.5deg); }
+  .sticky-note:nth-child(even){ transform:rotate(1.5deg); }
+  .sticky-note{ max-width:340px; }
+
+  /* Process */
+  .process-list{ margin-top:32px; }
+  .process-text p{ max-width:100%; }
+
+  /* Valeurs */
+  .values-bar{ margin-top:32px; }
+
+  /* Clients */
+  .clients-row{ gap:10px; margin-top:28px; }
+
+  /* Bandeau CTA : boutons empilés pleine largeur */
+  .cta-band{ border-radius:18px; }
+  .cta-actions{ width:100%; flex-direction:column; gap:12px; }
+  .cta-actions .btn{ width:100%; justify-content:center; }
+
+  /* Formulaire contact */
+  .contact-hero-grid{ gap:36px; }
+  .contact-hero-copy h1,
+  .contact-hero-copy p.lede{ max-width:100%; }
+  .contact-form-card{ border-radius:18px; }
+  .contact-strip > div{ align-items:flex-start; }
+
+  /* Décorations flottantes : moins envahissantes */
+  .contact-hero .deco{ opacity:.55; }
+  .deco-3, .deco-5{ right:3%; }
+
+  /* Pied de page */
+  .footer-grid{ grid-template-columns:1fr 1fr; }
+  .footer-grid > :first-child{ grid-column:1 / -1; }
+  .footer-logo{ height:72px; }
+  footer{ padding:52px 0 max(22px, env(safe-area-inset-bottom)); }
+}
+
+/* =========================================================
+   MOBILE (≤ 560px)
+   ========================================================= */
+@media (max-width:560px){
+
+  /* Navigation plus basse */
+  .navbar .container{ height:72px; }
+  .brand, .brand-logo{ height:56px; }
+  .brand-logo{ max-width:96px; }
+
+  /* Titres */
+  h2.section-title,
+  .section-head h2,
+  .about-copy h2,
+  .about-simple h2{ font-size:clamp(1.4rem,6vw,1.65rem); }
+  .page-hero h1,
+  .contact-hero-copy h1{ font-size:clamp(1.5rem,7vw,1.9rem); }
+
+  /* Boutons principaux : texte lisible, sans coupure */
+  .btn{ font-size:.92rem; }
+  .btn-primary .btn-label{ padding:11px 18px; }
+  .hero-v2-actions .btn-primary{ width:max-content; max-width:100%; }
+
+  /* Téléphone du héros */
+  .hero-phone .ring{ width:42px; height:42px; }
+
+  /* Pied de page : une colonne */
+  .footer-grid{ grid-template-columns:1fr; }
+  .footer-grid > :first-child{ grid-column:auto; }
+  .footer-bottom{ flex-direction:column; gap:14px; }
+}
+
+/* =========================================================
+   PETITS MOBILES (≤ 420px)
+   ========================================================= */
+@media (max-width:420px){
+
+  /* Indicatif + numéro : empilés pour rester saisissables */
+  .phone-group{ grid-template-columns:1fr; gap:12px; }
+
+  .contact-form-card{ padding:22px 16px; }
+  .contact-form .field-row{ gap:0; }
+
+  /* Valeurs et cartes info */
+  .info-card{ padding:20px 18px; }
+  .rating-score{ font-size:2.3rem; }
+}
+
+/* =========================================================
+   TRÈS PETITS ÉCRANS (≤ 400px)
+   ========================================================= */
+@media (max-width:400px){
+
+  /* Badge du héros : autorise le retour à la ligne au lieu de déborder */
+  .eyebrow{
+    white-space:normal;
+    line-height:1.3;
+    border-radius:28px;
+    padding:6px 14px 6px 6px;
+    font-size:.76rem;
+    gap:10px;
+  }
+
+  .hero-v2-text h1.hero-rotator{ font-size:.95rem; min-height:10.5em; }
+  .label-pill{ font-size:.8rem; padding:7px 14px; }
+  .nav-cta{ gap:8px; }
+  .social-row a{ width:28px; height:28px; }
+  .social-row--top a{ width:24px; height:24px; }
+}
+
+/* =========================================================
+   ÉCRANS TACTILES : pas d'effets « hover » collants
+   ========================================================= */
+@media (hover:none) and (max-width:960px){
+  .brand:hover .brand-logo{ transform:none; }
+  .btn:hover,
+  .btn-submit-pill:hover,
+  .social-row a:hover{ transform:none; }
+  .btn-notch:hover{ transform:none; }
+  .sticky-note:hover{ transform:none; }
+  .sticky-note:nth-child(odd):hover{ transform:rotate(-1.5deg); }
+  .sticky-note:nth-child(even):hover{ transform:rotate(1.5deg); }
+  .value-col:hover{ background:transparent; }
+}
+
+/* =========================================================
+   TÉLÉPHONE EN PAYSAGE (hauteur réduite)
+   ========================================================= */
+@media (max-width:960px) and (max-height:480px) and (orientation:landscape){
+  .hero-v2-inner{ min-height:0; padding:12px 0 28px; }
+  .hero-v2-text h1.hero-rotator{ min-height:6em; }
+  .nav-links{ max-height:calc(100vh - 100px); max-height:calc(100dvh - 100px); }
+  .contact-hero{ padding:44px 0 52px; }
+}
+
+/* =========================================================
+   AJUSTEMENTS V2 — réseaux sociaux, bouton RDV du haut,
+   bandeau « Envie de… » (mobile & tablette uniquement)
+   ========================================================= */
+
+/* ---- Réseaux sociaux : rangée régulière, centrée, sans débordement ---- */
+@media (max-width:960px){
+  .social-row{
+    display:flex; flex-wrap:nowrap; align-items:center; justify-content:flex-end;
+    gap:7px;
+  }
+  .social-row a{ flex:0 0 auto; width:30px; height:30px; font-size:.82rem; }
+
+  /* Barre du haut : infos à gauche, petits logos alignés à droite, une seule ligne */
+  .topbar .container{
+    flex-direction:row; flex-wrap:nowrap;
+    justify-content:space-between; align-items:center;
+    gap:10px; min-height:0;
+  }
+  .topbar-left{ flex:1 1 auto; min-width:0; justify-content:flex-start; gap:12px; }
+  .topbar-right{ flex:0 0 auto; width:auto; justify-content:flex-end; gap:8px; margin-left:auto; }
+  .social-row--top{ gap:6px; }
+  .social-row--top a{ width:26px; height:26px; font-size:.75rem; }
+
+  /* Pied de page : logos centrés au milieu */
+  .footer-bottom{ flex-direction:column; justify-content:center; align-items:center; text-align:center; gap:14px; }
+  .footer-bottom .social-row{ justify-content:center; margin-left:0; }
+  .footer-bottom .social-row a{ width:34px; height:34px; font-size:.92rem; }
+}
+@media (max-width:560px){
+  .topbar{ font-size:.76rem; }
+  .topbar-left{ gap:8px; }
+}
+
+/* ---- Bouton « Prendre rendez-vous » du haut : simple bouton rond ---- */
+@media (max-width:960px){
+  .nav-cta .btn-primary{ display:none; }
+  .nav-cta{ margin-left:auto; }
+}
+
+/* ---- Bandeau d'appel à l'action « Envie de… » : cadre plus compact ---- */
+@media (max-width:960px){
+  .cta-band{
+    padding:20px 22px; gap:14px; border-radius:16px;
+    flex-direction:column; align-items:flex-start;
+  }
+  .cta-band h2{ font-size:clamp(1rem,2.8vw,1.2rem); line-height:1.25; max-width:100%; }
+  .cta-actions{ gap:10px; width:100%; }
+  .cta-actions .btn{ font-size:.82rem; }
+  .cta-actions .btn-primary{ padding:3px; gap:4px; }
+  .cta-actions .btn-primary .btn-label{ padding:8px 16px; }
+  .cta-actions .btn-primary .btn-arrow{ width:30px; height:30px; font-size:.85rem; }
+}
+@media (max-width:700px){
+  .cta-band{ padding:16px 16px; gap:12px; border-radius:14px; }
+  .cta-band h2{ font-size:1rem; }
+  .cta-actions{ flex-direction:column; }
+  .cta-actions .btn{ width:100%; justify-content:center; font-size:.8rem; }
+  .cta-actions .btn-primary .btn-label{ flex:1; justify-content:center; padding:8px 14px; }
+  .cta-actions .btn-on-dark{ padding:9px 16px; }
+}
+
+/* ---- Logos réseaux dans le pied de page (sous « Votre partenaire… ») ---- */
+@media (max-width:960px){
+  .footer-grid .social-row{
+    justify-content:flex-start; margin-left:0; margin-top:16px; gap:10px; flex-wrap:wrap;
+  }
+  .footer-grid .social-row a{ width:36px; height:36px; font-size:.95rem; }
+}
+
+/* ---- Boutons « Parlons / Discuter de votre projet » : cadres réduits ---- */
+@media (max-width:960px){
+  .btn-primary{ padding:3px; gap:5px; }
+  .btn-primary .btn-label{
+    padding:9px 18px; font-size:.84rem; line-height:1.2; white-space:nowrap;
+  }
+  .btn-primary .btn-arrow{ width:32px; height:32px; font-size:.85rem; }
+}
+@media (max-width:420px){
+  .btn-primary .btn-label{ padding:8px 14px; font-size:.8rem; }
+  .btn-primary .btn-arrow{ width:30px; height:30px; }
+}
+
+/* ---- Process : le rond d'icône ne chevauche plus le numéro ---- */
+@media (max-width:960px){
+  .process-visual{ gap:14px; justify-content:flex-start; flex-wrap:nowrap; }
+  .process-row .process-icon,
+  .process-row:nth-child(even) .process-icon{
+    position:static; right:auto; left:auto; bottom:auto;
+    flex-shrink:0; width:42px; height:42px; font-size:.95rem;
+    align-self:center;
+  }
+  .process-number{ font-size:clamp(3rem,16vw,4.6rem); }
+}
+@media (min-width:801px) and (max-width:960px){
+  .process-visual{ justify-content:center; }
+}
