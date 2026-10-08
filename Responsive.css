@@ -323,6 +323,22 @@
   .btn-primary .btn-arrow{ width:30px; height:30px; }
 }
 
+/* ---- Barre du haut : localisation masquée ---- */
+@media (max-width:960px){
+  /* Spécificité renforcée : « .topbar-left span » l'emportait sur « .topbar-loc » */
+  .topbar .topbar-left .topbar-loc,
+  .topbar .topbar-loc,
+  .topbar-loc{ display:none !important; }
+}
+
+/* ---- Héros : boutons « Parlons… » et « Appelez-nous » remontés vers le milieu ---- */
+@media (max-width:960px){
+  .hero-v2-actions{ margin-bottom:120px; padding-top:12px; }
+}
+@media (max-width:560px){
+  .hero-v2-actions{ margin-bottom:104px; padding-top:8px; }
+}
+
 /* ---- Process : le rond d'icône ne chevauche plus le numéro ---- */
 @media (max-width:960px){
   .process-visual{ gap:14px; justify-content:flex-start; flex-wrap:nowrap; }
